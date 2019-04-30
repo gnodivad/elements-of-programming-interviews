@@ -43,7 +43,8 @@ public class BuySellStockOnceTest {
     }
 
     private void test(List<Integer> prices, int maxProfit) {
-        assertEquals(maxProfit, BuySellStockOnce.buySellStockOnce(prices));
+        // 1st attempt
+        assertEquals(maxProfit, BuySellStockOnce.buySellStockOnce1(prices));
     }
 
 }

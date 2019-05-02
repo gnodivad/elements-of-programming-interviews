@@ -1,6 +1,6 @@
 # Chapter 10: Binary Trees
 
-- [ ] 10.1 IsHeightBalanced
+- [x] 10.1 IsHeightBalanced ✅1
 - [ ] 10.2 IsSymmetric
 - [ ] 10.3 ComputeLowestCommonAncestor
 - [ ] 10.4 ComputeLCAWithParent

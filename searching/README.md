@@ -1,6 +1,6 @@
 # Chapter 12: Searching
 
-- [ ] 12.1 SearchSorted
+- [x] 12.1 SearchSorted ✅
 - [ ] 12.2 SearchSortedIndex
 - [ ] 12.3 SearchSortedCyclic
 - [ ] 12.4 IntegerSquareRoot

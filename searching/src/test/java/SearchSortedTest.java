@@ -1,6 +1,5 @@
 import org.junit.Test;
-import org.mockito.internal.util.collections.ArrayUtils;
-
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -15,7 +14,7 @@ public class SearchSortedTest {
         n = 10;
         k = 5;
 
-        test(n,k);
+        test(n, k);
     }
 
     @Test
@@ -23,7 +22,7 @@ public class SearchSortedTest {
         n = 50;
         k = 20;
 
-        test(n,k);
+        test(n, k);
     }
 
     @Test
@@ -31,7 +30,7 @@ public class SearchSortedTest {
         n = 100;
         k = 73;
 
-        test(n,k);
+        test(n, k);
     }
 
     @Test
@@ -39,7 +38,7 @@ public class SearchSortedTest {
         n = 100;
         k = 1;
 
-        test(n,k);
+        test(n, k);
     }
 
     @Test
@@ -47,11 +46,29 @@ public class SearchSortedTest {
         n = 100;
         k = 99;
 
-        test(n,k);
+        test(n, k);
+    }
+
+    @Test
+    public void search6() throws Exception {
+        List<Integer> list = Arrays.asList(-14, -10, 2, 108, 108, 243, 285, 285, 401);
+
+        testWithList(list, 108);
+    }
+
+    @Test
+    public void search7() throws Exception {
+        List<Integer> list = Arrays.asList(-14, -10, 2, 108, 108, 243, 285, 285, 401);
+
+        testWithList(list, 285);
     }
 
     public void test(int n, int k) throws Exception {
         List<Integer> list = StreamUtil.sequence(n);
+        assertEquals(list.indexOf(k), SearchSorted.search(list, k));
+    }
+
+    public void testWithList(List<Integer> list, int k) throws Exception {
         assertEquals(list.indexOf(k), SearchSorted.search(list, k));
     }
 

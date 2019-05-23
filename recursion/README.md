@@ -1,6 +1,6 @@
 # Chapter 16: Recursion
 
-- [ ] 16.1 TowersOfHanoi
+- [x] 16.1 TowersOfHanoi ✅1
 - [ ] 16.2 NQueens
 - [ ] 16.3 GeneratePermutations
 - [ ] 16.4 GeneratePowerSet
@@ -11,3 +11,7 @@
 - [ ] 16.9 SudokuSolver
 - [ ] 16.10 ComputeGrayCode
 - [ ] 16.11 ComputeDiameter
+
+## 16.1 TowersOfHanoi
+
+![Tower of Hanoi](16.1.JPG)

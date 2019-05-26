@@ -1,6 +1,6 @@
 # Chapter 17: Dynamic Programming
 
-- [ ] 17.1 ComputeScoreCombinations
+- [x] 17.1 ComputeScoreCombinations ✅1
 - [ ] 17.2 ComputeLevenshtein
 - [ ] 17.3 CountPossibleTraversals
 - [ ] 17.4 ComputeBinomialCoefficients

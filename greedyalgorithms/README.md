@@ -1,6 +1,6 @@
 # Chapter 18: Greedy Algorithms and Invariants
 
-- [ ] 18.1 ComputeOptimumAssignment
+- [x] 18.1 ComputeOptimumAssignment ✅1
 - [ ] 18.2 ScheduleMinimizedWaitingTime
 - [ ] 18.3 IntervalCoveringProblem
 - [ ] 18.4 ThreeSumProblem
@@ -8,4 +8,3 @@
 - [ ] 18.6 GasUpProblem
 - [ ] 18.7 ComputeMaximumWaterTrapped
 - [ ] 18.8 ComputeLargestRectangle
- 

@@ -14,7 +14,7 @@ public class ThreeSumProblemTest {
     @Test
     public void hasThreeSum1() throws Exception {
         expected = true;
-        A = Arrays.asList(11,2,5,7,3);
+        A = Arrays.asList(11, 2, 5, 7, 3);
         t = 21;
 
         test(expected, A, t);
@@ -22,8 +22,8 @@ public class ThreeSumProblemTest {
 
     @Test
     public void hasThreeSum2() throws Exception {
-        expected = true;
-        A = Arrays.asList(2,7);
+        expected = false;
+        A = Arrays.asList(2, 7);
         t = 20;
 
         test(expected, A, t);
@@ -32,7 +32,7 @@ public class ThreeSumProblemTest {
     @Test
     public void hasThreeSum3() throws Exception {
         expected = false;
-        A = Arrays.asList(2,7);
+        A = Arrays.asList(2, 7);
         t = 19;
 
         test(expected, A, t);

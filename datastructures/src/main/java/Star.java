@@ -19,10 +19,12 @@ public class Star implements Comparable<Star> {
 
     @Override
     public String toString() {
-        return "Star{" +
-                "x=" + x +
-                ", y=" + y +
-                ", z=" + z +
-                '}';
+        return "Star{" + "x=" + x + ", y=" + y + ", z=" + z + '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        Star rhs = (Star) o;
+        return this.x == rhs.x && this.y == rhs.y && this.z == rhs.z;
     }
 }

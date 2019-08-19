@@ -10,7 +10,7 @@ public class IntegerSquareRootTest {
     @Test
     public void squareRoot1() throws Exception {
         expected = 4;
-        n = 4;
+        n = 16;
 
         test(expected, n);
     }

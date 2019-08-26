@@ -1,11 +1,11 @@
 # Chapter 13: Hash Tables
 
-- [x] 13.1 PalindromicPermutations ✅1
-- [x] 13.2 IsLetterConstructable ✅1
+- [x] 13.1 PalindromicPermutations ✅
+- [x] 13.2 IsLetterConstructable ✅
 - [ ] 13.3 LRUCache
 - [ ] 13.4 ComputeLCA
 - [ ] 13.5 ComputeKMostFrequent
-- [ ] 13.6 NearestRepeated
+- [x] 13.6 NearestRepeated ✅
 - [ ] 13.7 SmallestSubarray
 - [ ] 13.8 SmallestSequentialSubarray
 - [ ] 13.9 LongestSubarray
@@ -81,3 +81,55 @@ public class IsAnonymousLetterConstructible {
 **Logic Error**
 
 1. All the comparision of the char should be done using case insensitive. But this code never take care of that scenario. Compare a uppercase letter with a lowercase letter will cause result as false instead of true.
+
+## 13.6 FIND THE NEAREST REPEATED ENTRIES IN AN ARRAY
+
+Input: An array of word, list
+
+Output: The closest distance of two repeated word
+
+**Logic**
+
+1. Initialize an hash map with the word as the key, and the distance between two repeated word as value.
+2. Iterate all the words in array.
+   - If the word never found in hash map, add it and set distance as 0 since is first entry.
+   - If the word is found in hash map, calculate the distance of word and put the minimum distance to map.
+
+```java
+public static int findNearest(List < String > list) {
+    HashMap < String, Integer[] > map = new HashMap < String, Integer[] > ();
+
+    for (int i = 0; i < list.size(); i++) {
+        if (map.containsKey(list.get(i))) {
+            int previousIndex = map.get(list.get(i))[0];
+            int distance = map.get(list.get(i))[1];
+
+            map.put(list.get(i), new Integer[] {
+                i,
+                Math.min(distance, i - previousIndex)
+            });
+        } else {
+            map.put(list.get(i), new Integer[] {
+                i,
+                0
+            });
+        }
+    }
+
+    int minimumDistance = 0;
+    for (String key: map.keySet()) {
+        minimumDistance = Math.min(minimumDistance, map.get(key)[1]);
+    }
+
+    return minimumDistance;
+}
+```
+
+**Syntax Error**
+
+1. The array that act as value should initialize first before push into hashmap.
+
+**Logic Error**
+
+1. Should not put 0 as distance value when the key is not found because 0 will always become the minimum.
+2. The minimum distance should not assigned 0.

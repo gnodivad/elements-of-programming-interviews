@@ -1,7 +1,7 @@
 # Chapter 16: Recursion
 
 - [x] 16.1 TowersOfHanoi ✅1
-- [ ] 16.2 NQueens
+- [x] 16.2 NQueens ✅1
 - [ ] 16.3 GeneratePermutations
 - [ ] 16.4 GeneratePowerSet
 - [ ] 16.5 GenerateSubsetsK
